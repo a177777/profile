@@ -16,6 +16,7 @@ body {
     max-width: 300px;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 .profile-image {
@@ -26,35 +27,50 @@ body {
     margin-bottom: 15px;
 }
 
+.profile-info {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 20px;
+}
+
 .profile-name {
     font-size: 22px;
     font-weight: bold;
     margin: 10px 0 5px;
 }
 
-.profile-title {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 15px;
-}
-
+.profile-title,
+.profile-location,
+.profile-hobby,
 .profile-description {
     font-size: 14px;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .profile-socials {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
 }
 
 .social-link {
+    display: block;
     color: #0073e6;
     text-decoration: none;
-    font-size: 14px;
 }
 
 .social-link:hover {
     text-decoration: underline;
 }
+
