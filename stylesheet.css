@@ -59,18 +59,23 @@ body {
     flex-direction: column;
 }
 
-.social-link img {
-    width: 24px;
-    height: 24px;
-}
-
 .social-link {
     display: block;
     color: #0073e6;
     text-decoration: none;
 }
 
+.vertical-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-text span {
+    display: block;
+    line-height: 1.5;
+}
+
 .social-link:hover {
     text-decoration: underline;
 }
-
