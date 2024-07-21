@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Card</title>
- <link rel="stylesheet" href="https://Summerenjoy.github.io/profile/stylesheet.css">
+  <link rel="stylesheet" href="https://Summerenjoy.github.io/profile/stylesheet.css">
 </head>
-<body>
+<body class="dark-theme">
+    <div class="theme-buttons">
+        <button onclick="setTheme('dark')">Dark</button>
+        <button onclick="setTheme('light')">Light</button>
+    </div>
     <div class="profile-card">
-        <img src="https://cdn.discordapp.com/attachments/1262034241793953919/1264390990521962567/IMG_8338.png?ex=669db35f&is=669c61df&hm=b8f69aec730722ce70350a77504bee1ca06bd45f9b7872b482dd93de6efc72e7&.jpg" alt="Profile Picture" class="profile-image">
+        <img src="https://cdn.discordapp.com/attachments/1262034241793953919/1264390990521962567/IMG_8338.png?ex=669db35f&is=669c61df&hm=b8f69aec730722ce70350a77504bee1ca06bd45f9b7872b482dd93de6efc72e7&.jpg" alt="Profile Picture" class="profile-image" onclick="displayImageModal(this.src)">
         <div class="profile-info">
             <h2 class="profile-name">RUI</h2>
             <p class="profile-title">Web Developer</p>
@@ -24,6 +28,17 @@
             </div>
         </div>
     </div>
+
+    <div id="image-modal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="modal-buttons">
+            <button onclick="saveImage()">Save</button>
+            <button onclick="copyImageLink()">Copy Link</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
